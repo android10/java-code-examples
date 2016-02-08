@@ -1,0 +1,28 @@
+//To execute the app via commandLine: ./gradlew --console plain run
+
+buildscript {
+  repositories {
+    mavenCentral()
+    jcenter()
+  }
+}
+
+repositories {
+  mavenCentral()
+  jcenter()
+}
+
+apply plugin: 'application'
+
+targetCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_7
+
+//noinspection GroovyUnusedAssignment
+mainClassName = "com.fernandocejas.java.samples.Main"
+run {
+  standardInput = System.in
+}
+
+dependencies {
+  compile "com.fernandocejas:arrow:1.0.0"
+}
