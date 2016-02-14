@@ -26,4 +26,5 @@ run {
 dependencies {
   compile 'com.fernandocejas:arrow:1.0.0'
   compile 'com.google.code.gson:gson:2.6.1'
+  compile 'io.reactivex:rxjava:1.1.1'
 }
