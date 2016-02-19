@@ -14,7 +14,9 @@ repositories {
 
 apply plugin: 'application'
 
+//noinspection GroovyUnusedAssignment
 targetCompatibility = JavaVersion.VERSION_1_7
+//noinspection GroovyUnusedAssignment
 sourceCompatibility = JavaVersion.VERSION_1_7
 
 //noinspection GroovyUnusedAssignment
