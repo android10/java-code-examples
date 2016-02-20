@@ -1,7 +1,9 @@
 Java code examples 
 =========================
 
-A java command line application with code samples
+A java command line application with code samples of articles I have written:
+
+- [How to use Optional values on Java and Android](http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/)
 
 Executing samples
 -----------------
