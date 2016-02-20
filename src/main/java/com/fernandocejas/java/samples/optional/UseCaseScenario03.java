@@ -23,6 +23,22 @@ public class UseCaseScenario03 {
     //empty
   }
 
+  private Observable<List<String>> feed() {
+    return ads()
+        .flatMap(TO_AD_ITEM)
+        .filter(EMPTY_ELEMENTS)
+        .concatWith(tracks())
+        .observeOn(Schedulers.immediate());
+  }
+
+  private Observable<Optional<List<String>>> ads() {
+    return Observable.just(Optional.fromNullable(Collections.singletonList("This is and Ad")));
+  }
+
+  private Observable<List<String>> tracks() {
+    return Observable.just(Arrays.asList("IronMan Song", "Wolverine Song", "Batman Sound"));
+  }
+
   @Override public String toString() {
     final StringBuilder builder = new StringBuilder();
     feed().subscribe(feed -> {
@@ -31,21 +47,5 @@ public class UseCaseScenario03 {
       }
     });
     return builder.toString();
-  }
-
-  private Observable<List<String>> feed() {
-    return ads()
-        .flatMap(TO_AD_ITEM)
-        .filter(EMPTY_ELEMENTS)
-        .concatWith(users())
-        .observeOn(Schedulers.immediate());
-  }
-
-  private Observable<Optional<List<String>>> ads() {
-    return Observable.just(Optional.fromNullable(Collections.singletonList("This is and Ad")));
-  }
-
-  private Observable<List<String>> users() {
-    return Observable.just(Arrays.asList("IronMan", "Wolverine", "Batman", "Superman"));
   }
 }
