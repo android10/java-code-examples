@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
-@See(ref = "")
+@See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
 public class UseCaseScenario02 {
 
   private static final String JSON_FILE = "[{\n"

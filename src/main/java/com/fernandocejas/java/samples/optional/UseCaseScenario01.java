@@ -4,7 +4,7 @@ import com.fernandocejas.arrow.annotations.See;
 import com.fernandocejas.arrow.checks.Preconditions;
 import com.fernandocejas.arrow.optional.Optional;
 
-@See(ref = "")
+@See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
 public class UseCaseScenario01 {
 
   private static final String BRAND = "BMW";

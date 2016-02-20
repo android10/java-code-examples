@@ -9,7 +9,7 @@ import rx.Observable;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-@See(ref = "")
+@See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
 public class UseCaseScenario03 {
 
   public static final Func1<Optional<List<String>>, Observable<List<String>>> TO_AD_ITEM =

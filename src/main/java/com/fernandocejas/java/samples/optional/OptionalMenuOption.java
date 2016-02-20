@@ -4,7 +4,7 @@ import com.fernandocejas.arrow.annotations.See;
 import java.util.ArrayList;
 import java.util.List;
 
-@See(ref = "")
+@See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
 public class OptionalMenuOption {
   private final List<Object> examples;
 
