@@ -15,9 +15,9 @@ repositories {
 apply plugin: 'application'
 
 //noinspection GroovyUnusedAssignment
-targetCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_8
 //noinspection GroovyUnusedAssignment
-sourceCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 //noinspection GroovyUnusedAssignment
 mainClassName = "com.fernandocejas.java.samples.Main"
