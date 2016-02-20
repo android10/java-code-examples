@@ -17,9 +17,11 @@ public class OptionalMenuOption {
 
   public void run() {
     for (Object object : examples) {
+      printMessage("--------- Printing example ---------");
       printMessage(object.toString());
+      printMessage("\n");
     }
-    printMessage("Exiting example...");
+    printMessage("Exiting application...");
     System.exit(0);
   }
 
