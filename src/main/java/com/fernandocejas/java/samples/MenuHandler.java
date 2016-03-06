@@ -1,5 +1,6 @@
 package com.fernandocejas.java.samples;
 
+import com.fernandocejas.java.samples.observable.ObservableMenuOption;
 import com.fernandocejas.java.samples.optional.OptionalMenuOption;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.io.InputStreamReader;
 class MenuHandler {
 
   enum MenuItem {
-    OPTIONAL, EXIT;
+    OPTIONAL, OBSERVABLE, EXIT;
 
     static MenuItem fromString(String option) {
       MenuItem menuItem = EXIT;
@@ -32,11 +33,11 @@ class MenuHandler {
   void createMainMenu() {
     final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.println("--- Java Code Samples ---\n");
+    System.out.println("--- Java Code Samples ---" + Const.LINE_FEED);
     for (MenuItem menuItem : MenuItem.values()) {
       System.out.println(menuItem.ordinal() + " - " + menuItem.name());
     }
-    System.out.print("\nChoose an option: ");
+    System.out.print(Const.LINE_FEED + "Choose an option: ");
 
     try {
       processOption(reader.readLine());
@@ -50,6 +51,9 @@ class MenuHandler {
     switch (menuItem) {
       case OPTIONAL:
         new OptionalMenuOption().run();
+        break;
+      case OBSERVABLE:
+        new ObservableMenuOption().run();
         break;
       case EXIT:
       default:

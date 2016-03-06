@@ -2,6 +2,7 @@ package com.fernandocejas.java.samples.optional;
 
 import com.fernandocejas.arrow.annotations.See;
 import com.fernandocejas.arrow.optional.Optional;
+import com.fernandocejas.java.samples.Const;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -43,7 +44,7 @@ public class UseCaseScenario03 {
     final StringBuilder builder = new StringBuilder();
     feed().subscribe(feed -> {
       for (String feedElement : feed) {
-        builder.append("\n").append(feedElement);
+        builder.append(Const.LINE_FEED).append(feedElement);
       }
     });
     return builder.toString();

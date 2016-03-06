@@ -3,6 +3,7 @@ package com.fernandocejas.java.samples.optional;
 import com.fernandocejas.arrow.annotations.See;
 import com.fernandocejas.arrow.optional.Optional;
 import com.fernandocejas.arrow.strings.Strings;
+import com.fernandocejas.java.samples.Const;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import java.util.Arrays;
@@ -50,11 +51,11 @@ public class UseCaseScenario02 {
   @Override public String toString() {
     final StringBuilder builder = new StringBuilder();
     for (User user : usersList) {
-      builder.append("\n---------------------------------\n");
-      builder.append("UserId: ").append(user.id()).append("\n");
-      builder.append("FullName: ").append(user.fullname()).append("\n");
+      builder.append(Const.LINE_FEED + "---------------------------------" + Const.LINE_FEED);
+      builder.append("UserId: ").append(user.id()).append(Const.LINE_FEED);
+      builder.append("FullName: ").append(user.fullname()).append(Const.LINE_FEED);
       builder.append("NickName: ").append(user.nickname().isPresent() ? user.nickname().get() : Strings.EMPTY);
-      builder.append("\n---------------------------------\n");
+      builder.append(Const.LINE_FEED + "---------------------------------" + Const.LINE_FEED);
     }
     return builder.toString();
   }

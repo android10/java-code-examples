@@ -3,6 +3,7 @@ package com.fernandocejas.java.samples.optional;
 import com.fernandocejas.arrow.annotations.See;
 import com.fernandocejas.arrow.checks.Preconditions;
 import com.fernandocejas.arrow.optional.Optional;
+import com.fernandocejas.java.samples.Const;
 
 @See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
 public class UseCaseScenario01 {
@@ -19,8 +20,8 @@ public class UseCaseScenario01 {
     final Car carWithRegNumber = new Car(BRAND, MODEL, REGISTRATION_NUMBER);
     final Car carWithoutRegNumber = new Car(BRAND, MODEL, null);
     final StringBuilder message = new StringBuilder();
-    message.append("Car with Registration Number --> ").append(carWithRegNumber.information()).append("\n");
-    message.append("Car without Registration Number --> ").append(carWithoutRegNumber.information()).append("\n");
+    message.append("Car with Registration Number --> ").append(carWithRegNumber.information()).append(Const.LINE_FEED);
+    message.append("Car without Registration Number --> ").append(carWithoutRegNumber.information()).append(Const.LINE_FEED);
 
     return message.toString();
   }
