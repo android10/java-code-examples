@@ -1,6 +1,7 @@
 package com.fernandocejas.java.samples.observable;
 
 import com.fernandocejas.java.samples.Const;
+import java.util.Arrays;
 import rx.Observable;
 
 public class Scenario01 {
@@ -18,6 +19,9 @@ public class Scenario01 {
     builder.append("FlatMap elements: ")
         .append(Const.LINE_FEED)
         .append(flatMapElements());
+    builder.append("Map elements: ")
+        .append(Const.LINE_FEED)
+        .append(mapElement());
     return builder.toString();
   }
 
@@ -30,6 +34,17 @@ public class Scenario01 {
     Observable.just(1, 2, 3)
         .flatMap(integer -> Observable.just("Number: " + String.valueOf(integer)))
         .subscribe(string -> { output.append(string).append(Const.LINE_FEED); });
+    return output.toString();
+  }
+
+  private String mapElement() {
+    final StringBuilder output = new StringBuilder();
+    Observable.from(Arrays.asList(1, 3, 5))
+        .map(number -> output
+            .append("Map element: ")
+            .append(String.valueOf(number + number))
+            .append(Const.LINE_FEED))
+        .subscribe();
     return output.toString();
   }
 }
