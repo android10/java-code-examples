@@ -10,6 +10,7 @@ public class ObservableMenuOption {
   public ObservableMenuOption() {
     examples = new ArrayList<>(1);
     examples.add(new Scenario01());
+    examples.add(new Scenario02());
   }
 
   public void run() {
