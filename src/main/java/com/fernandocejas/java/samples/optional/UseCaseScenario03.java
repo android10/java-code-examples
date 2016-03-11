@@ -11,16 +11,16 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 @See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
-public class UseCaseScenario03 {
+class UseCaseScenario03 {
 
-  public static final Func1<Optional<List<String>>, Observable<List<String>>> TO_AD_ITEM =
+  private static final Func1<Optional<List<String>>, Observable<List<String>>> TO_AD_ITEM =
       ads -> ads.isPresent()
           ? Observable.just(ads.get())
           : Observable.just(Collections.<String>emptyList());
 
-  public static final Func1<List<String>, Boolean> EMPTY_ELEMENTS = ads -> !ads.isEmpty();
+  private static final Func1<List<String>, Boolean> EMPTY_ELEMENTS = ads -> !ads.isEmpty();
 
-  public UseCaseScenario03() {
+  UseCaseScenario03() {
     //empty
   }
 

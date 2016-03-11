@@ -11,7 +11,7 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 @See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
-public class UseCaseScenario02 {
+class UseCaseScenario02 {
 
   private static final String JSON_FILE = "[{\n"
       + "  \"id\": 1,\n"
@@ -38,7 +38,7 @@ public class UseCaseScenario02 {
 
   private final List<User> usersList;
 
-  public UseCaseScenario02() {
+  UseCaseScenario02() {
     usersList = getUsers();
   }
 
@@ -70,15 +70,15 @@ public class UseCaseScenario02 {
     @SerializedName("nickname")
     private String nickname;
 
-    public int id() {
+    int id() {
       return userId;
     }
 
-    public String fullname() {
+    String fullname() {
       return fullname;
     }
 
-    public Optional<String> nickname() {
+    Optional<String> nickname() {
       return Optional.fromNullable(nickname);
     }
   }

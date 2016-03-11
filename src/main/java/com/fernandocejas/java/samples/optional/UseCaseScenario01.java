@@ -6,13 +6,13 @@ import com.fernandocejas.arrow.optional.Optional;
 import com.fernandocejas.java.samples.Const;
 
 @See(ref = "http://fernandocejas.com/2016/02/20/how-to-use-optional-on-android-and-java/")
-public class UseCaseScenario01 {
+class UseCaseScenario01 {
 
   private static final String BRAND = "BMW";
   private static final String MODEL = "X6";
   private static final String REGISTRATION_NUMBER = "123456";
 
-  public UseCaseScenario01() {
+  UseCaseScenario01() {
     //empty
   }
 

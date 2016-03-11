@@ -4,9 +4,9 @@ import com.fernandocejas.java.samples.Const;
 import java.util.Arrays;
 import rx.Observable;
 
-public class Scenario01 {
+class Scenario01 {
 
-  public Scenario01() {
+  Scenario01() {
     //empty
   }
 
